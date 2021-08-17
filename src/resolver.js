@@ -12,8 +12,8 @@ export const resolvers = {
     // weights: () => Weight,
   },
   Mutation: {
-    addWeight: async (_, { weight }) => {
-      const todayWeight = new Weight({ weight });
+    addWeight: async (_, { weightNum }) => {
+      const todayWeight = new Weight({ weightNum });
       await todayWeight.save();
       return todayWeight;
     },
