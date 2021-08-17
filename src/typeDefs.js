@@ -8,9 +8,9 @@ export const typeDefs = gql`
   }
   type Weight {
     id: ID!
-    weightNum: String!
+    weightNum: Float!
   }
   type Mutation {
-    addWeight(weightNum: String!): Weight!
+    addWeight(weightNum: Float!): Weight!
   }
 `;
