@@ -1,15 +1,15 @@
 import { Weight } from "./models/weight";
+import { GraphQLDate, GraphQLTime, GraphQLDateTime } from "graphql-iso-date";
 
-const test = async () => {
-  console.log("Weight", await Weight.find({}));
-};
-test();
+// Debug data in mongoDB
+(async () => {
+  console.log("Weight", await Weight.find());
+})``;
 
 export const resolvers = {
   Query: {
     helloWorld: () => "hello world",
     weights: () => Weight.find(),
-    // weights: () => Weight,
   },
   Mutation: {
     addWeight: async (_, { weightNum }) => {

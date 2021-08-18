@@ -1,3 +1,10 @@
 import mongoose from "mongoose";
 
-export const Weight = mongoose.model("Weight", { weightNum: Number });
+const schema = new mongoose.Schema(
+  {
+    weightNum: Number,
+  },
+  { timestamps: true }
+);
+
+export const Weight = mongoose.model("Weight", schema);
