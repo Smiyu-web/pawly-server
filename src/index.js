@@ -5,9 +5,12 @@ import mongoose from "mongoose";
 import { ApolloServer, gql } from "apollo-server-express";
 import { resolvers } from "./resolver";
 import { typeDefs } from "./typeDefs";
+import cors from "cors";
 
 const server = async () => {
   const app = express();
+  app.use(cors());
+
   const server = new ApolloServer({
     typeDefs,
     resolvers,
