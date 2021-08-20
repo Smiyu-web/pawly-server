@@ -7,6 +7,8 @@ import { resolvers } from "./resolver";
 import { typeDefs } from "./typeDefs";
 import cors from "cors";
 
+const port = process.env.PORT || 3001;
+
 const server = async () => {
   const app = express();
   app.use(cors());
@@ -29,8 +31,8 @@ const server = async () => {
 
   app.get("/", (req, res) => res.send("hello world"));
 
-  app.listen({ port: 3001 }, () => {
-    console.log("connected");
+  app.listen(port, () => {
+    console.log(`Server Listen START at port=${port}`);
   });
 };
 
