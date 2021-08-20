@@ -29,8 +29,8 @@ const server = async () => {
 
   app.get("/", (req, res) => res.send("hello world"));
 
-  app.listen({ port: 3001 }, () => {
-    console.log("connected");
+  app.listen(port, () => {
+    console.log(`Server Listen START at port=${port}`);
   });
 };
 
