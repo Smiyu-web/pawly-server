@@ -13,7 +13,13 @@ export const resolvers = {
   },
   Mutation: {
     addWeight: async (_, { weightNum }) => {
-      const todayWeight = new Weight({ weightNum });
+      const date = new Date();
+      const day = `${date.getFullYear()}-${
+        date.getMonth() + 1
+      }-${date.getDate()}`;
+
+      const todayWeight = new Weight({ weightNum, day });
+      console.log("check date", date);
       await todayWeight.save();
       return todayWeight;
     },
