@@ -11,6 +11,7 @@ export const typeDefs = gql`
     id: ID!
     weightNum: Float!
     createdAt: ISODate
+    day: String!
   }
   type Mutation {
     addWeight(weightNum: Float!): Weight!
