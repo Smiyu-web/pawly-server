@@ -7,6 +7,8 @@ import { resolvers } from "./resolver";
 import { typeDefs } from "./typeDefs";
 import cors from "cors";
 
+const port = process.env.PORT || 3001;
+
 const server = async () => {
   const app = express();
   app.use(cors());
