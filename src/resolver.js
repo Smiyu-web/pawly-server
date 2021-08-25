@@ -23,15 +23,15 @@ export const resolvers = {
       await todayWeight.save();
       return todayWeight;
     },
-    updateWeight: async (_, { day, updateWeightNum }) => {
-      const data = await Weight.findOne({ day: day });
-      console.log(data);
-      if (!data) {
-        throw new Error("Editable data doesn't exist");
-      }
-      await data.updateOne({ weightNum: updateWeightNum });
-      return data;
-    },
+    // updateWeight: async (_, { day, updateWeightNum }) => {
+    //   const data = await Weight.findOne({ day: day });
+    //   console.log(data);
+    //   if (!data) {
+    //     throw new Error("Editable data doesn't exist");
+    //   }
+    //   await data.updateOne({ weightNum: updateWeightNum });
+    //   return data;
+    // },
   },
 };
 
