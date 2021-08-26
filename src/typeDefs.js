@@ -15,6 +15,7 @@ export const typeDefs = gql`
   }
   type Mutation {
     addWeight(weightNum: Float!): Weight!
+    updateWeight(id: ID!, updateWeightNum: Float!): Weight!
+    deleteWeight(id: ID!): Weight!
   }
 `;
-// updateWeight(day: String!, updateWeightNum: Float!): Weight!
